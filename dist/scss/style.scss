@@ -14,8 +14,8 @@
     position:sticky;
     top: 0;
     display: flex;
-    justify-content: space-around;
-    margin: 1rem 2rem;
+    justify-content: space-between;
+    margin: 1rem 5rem;
     align-items: center;
     .logo{
         aspect-ratio: 1/1;
@@ -95,6 +95,7 @@
             font-weight: 700;
             font-size: 5em;
             line-height: 90px;
+            margin-bottom: 1rem;
         }
         .textTwo{
             @extend .textOne;
@@ -115,4 +116,26 @@
             object-fit: cover;
         }
     }
+
+    .indicatorDiv{
+        
+    }
+  .carousel-indicators {
+    position: absolute;
+    justify-content: start;
+    bottom:7rem;
+    margin: 0;
+  li{
+    background: $text-color;
+    border-radius: 50%;
+    width: 15px;
+    height: 1px;
+    opacity: 1;
+    &.active{
+    background: $blue;
+
+    }
+  }
+  }
+
  }

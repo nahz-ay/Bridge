@@ -15,8 +15,8 @@ body {
   position: sticky;
   top: 0;
   display: flex;
-  justify-content: space-around;
-  margin: 1rem 2rem;
+  justify-content: space-between;
+  margin: 1rem 5rem;
   align-items: center;
 }
 .menuBar .logo {
@@ -78,6 +78,7 @@ body {
   font-weight: 700;
   font-size: 5em;
   line-height: 90px;
+  margin-bottom: 1rem;
 }
 .mainSliderDiv .slideContent .textTwo {
   font-weight: 400;
@@ -94,6 +95,22 @@ body {
 }
 .mainSliderDiv .slideImage img {
   object-fit: cover;
+}
+.mainSliderDiv .carousel-indicators {
+  position: absolute;
+  justify-content: start;
+  bottom: 7rem;
+  margin: 0;
+}
+.mainSliderDiv .carousel-indicators li {
+  background: #000000;
+  border-radius: 50%;
+  width: 15px;
+  height: 1px;
+  opacity: 1;
+}
+.mainSliderDiv .carousel-indicators li.active {
+  background: #4776E6;
 }
 
 /*# sourceMappingURL=main.css.map */
