@@ -88,3 +88,31 @@
     }
  }
  
+ .mainSliderDiv{
+    margin: 10rem;
+    .slideContent{
+        .textOne{
+            font-weight: 700;
+            font-size: 5em;
+            line-height: 90px;
+        }
+        .textTwo{
+            @extend .textOne;
+            font-weight: 400;
+        }
+        .paraSlide{
+            font-size: 1.563em;
+            font-weight: 300;
+            width: 36rem;
+        }
+       
+    }
+    .slideImage{
+        position: relative;
+        width: 431px;
+        height: 481px;
+        img{
+            object-fit: cover;
+        }
+    }
+ }

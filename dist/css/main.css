@@ -71,4 +71,29 @@ body {
   background: #000000;
 }
 
+.mainSliderDiv {
+  margin: 10rem;
+}
+.mainSliderDiv .slideContent .textOne, .mainSliderDiv .slideContent .textTwo {
+  font-weight: 700;
+  font-size: 5em;
+  line-height: 90px;
+}
+.mainSliderDiv .slideContent .textTwo {
+  font-weight: 400;
+}
+.mainSliderDiv .slideContent .paraSlide {
+  font-size: 1.563em;
+  font-weight: 300;
+  width: 36rem;
+}
+.mainSliderDiv .slideImage {
+  position: relative;
+  width: 431px;
+  height: 481px;
+}
+.mainSliderDiv .slideImage img {
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=main.css.map */
