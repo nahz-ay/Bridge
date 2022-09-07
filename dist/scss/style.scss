@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: $font;
+    
+ }
+ body{
+    background: $bg-color;
+ }
+
+ .menuBar{
+    position:sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 2rem;
+    align-items: center;
+    .logo{
+        aspect-ratio: 1/1;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+
+    }
+    .menus{
+        ul{
+            li{
+                position: relative;
+                font-size: 1em;
+                margin: 0 0.75rem;
+                transition: .3s;
+                a{
+                    text-decoration: none;
+                    color:$text-color;
+                    font-weight: 400;
+                    // border-bottom: 2px solid transparent;
+                  
+                 }
+               &:hover{
+                &::after{
+                    content: "";
+                        position: absolute;
+                        background:$text-color;
+                        width: 20px;
+                        height: 4px;
+                        bottom: -2px;
+                        right: 10px;
+                        border-radius: 2px;
+                 }
+               }
+               
+            }
+        }
+    }
+    .rightNav{
+        ul{
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            li{
+                span{
+                    img{
+                        width:20px;
+                        height: 20px;
+                        object-fit: contain;
+                        
+                    }
+                }
+                .hamMenuBar{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.25rem;
+                    div{
+                        // display: block;
+                        width: 20px;
+                        height: 3px;
+                        background: $text-color;
+                    }
+                }
+            }
+        }
+    }
+ }
+ 
