@@ -1,82 +1,92 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     font-family: $font;
-    
- }
- body{
-    background: $bg-color;
- }
 
- .menuBar{
-    position:sticky;
+}
+
+body {
+    background: $bg-color;
+}
+
+.menuBar {
+    position: sticky;
     top: 0;
     display: flex;
     justify-content: space-between;
     margin: 1rem 5rem;
     align-items: center;
-    .logo{
+
+    .logo {
         aspect-ratio: 1/1;
-        img{
+
+        img {
             width: 100%;
             object-fit: cover;
         }
 
     }
-    .menus{
-        ul{
-            li{
+
+    .menus {
+        ul {
+            li {
                 position: relative;
                 font-size: 1em;
                 margin: 0 0.75rem;
                 transition: .3s;
-                a{
+
+                a {
                     text-decoration: none;
-                    color:$text-color;
+                    color: $text-color;
                     font-weight: 400;
                     // border-bottom: 2px solid transparent;
-                  
-                 }
-               &:hover{
-                &::after{
-                    content: "";
+
+                }
+
+                &:hover {
+                    &::after {
+                        content: "";
                         position: absolute;
-                        background:$text-color;
+                        background: $text-color;
                         width: 20px;
                         height: 4px;
                         bottom: -2px;
                         right: 10px;
                         border-radius: 2px;
-                 }
-               }
-               
+                    }
+                }
+
             }
         }
     }
-    .rightNav{
-        ul{
+
+    .rightNav {
+        ul {
             display: flex;
             gap: 1rem;
             align-items: center;
-            li{
-                span{
-                    img{
-                        width:20px;
+
+            li {
+                span {
+                    img {
+                        width: 20px;
                         height: 20px;
                         object-fit: contain;
-                        
+
                     }
                 }
-                .hamMenuBar{
+
+                .hamMenuBar {
                     position: relative;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
                     gap: 0.25rem;
-                    div{
+
+                    div {
                         // display: block;
                         width: 20px;
                         height: 3px;
@@ -86,56 +96,379 @@
             }
         }
     }
- }
- 
- .mainSliderDiv{
-    margin: 10rem;
-    .slideContent{
-        .textOne{
-            font-weight: 700;
-            font-size: 5em;
-            line-height: 90px;
-            margin-bottom: 1rem;
+}
+
+.mainSliderDiv {
+    @include paddingLg;
+
+    .sliderDiv {
+        .slideContent {
+            margin-top: 15%;
+
+            .textOne {
+                font-weight: 700;
+                font-size: 4em;
+                line-height: 90px;
+                margin-bottom: 1rem;
+            }
+
+            .textTwo {
+                @extend .textOne;
+                font-weight: 400;
+                line-height: 64px;
+            }
+
+            .paraSlide {
+                font-size: 1.563em;
+                font-weight: 300;
+                width: 36rem;
+            }
+
+
         }
-        .textTwo{
-            @extend .textOne;
-            font-weight: 400;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url('/dist/img/img01.png');
+            background-repeat: no-repeat;
         }
-        .paraSlide{
-            font-size: 1.563em;
-            font-weight: 300;
-            width: 36rem;
-        }
-       
-    }
-    .slideImage{
-        position: relative;
-        width: 431px;
-        height: 481px;
-        img{
-            object-fit: cover;
+
+
+
+        .slideImage {
+            position: relative;
+            width: 100%;
+            height: auto;
+            // top: -4rem;
+
+
+            img {
+                object-fit: cover;
+            }
+
+            // &::after {
+            //     // position: absolute;
+            //     content: "";
+            //     background-image: url('/dist/img/circle2.png');
+            //     width: 200px;
+            //     height: 200px;
+            // }
         }
     }
 
-    .indicatorDiv{
-        
+
+    .indicatorDiv {}
+
+    .carousel-indicators {
+        position: absolute;
+        justify-content: start;
+        bottom: 7rem;
+        margin: 0;
+
+        li {
+            background: $text-color;
+            border-radius: 50%;
+            width: 11px;
+            height: 11px;
+            opacity: 1;
+            border: 0;
+
+            &.active {
+                background: $blue;
+
+            }
+        }
     }
-  .carousel-indicators {
-    position: absolute;
-    justify-content: start;
-    bottom:7rem;
-    margin: 0;
-  li{
-    background: $text-color;
-    border-radius: 50%;
-    width: 15px;
-    height: 1px;
-    opacity: 1;
-    &.active{
-    background: $blue;
+
+}
+
+.servicesDiv {
+    margin-top: 10rem;
+    height: 40vh;
+    background: $bg-color;
+    position: relative;
+
+    .whatWeDoTopBG {
+        height: 10vh;
+        background: $white;
+
+        &::after {
+            content: "";
+            top: -99px;
+            position: absolute;
+            height: 100px;
+            width: 100%;
+            background-image: url(/dist/img/bottomShape.png);
+        }
+
+        &::before {
+            content: "";
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            top: -188px;
+            z-index: 9;
+            // bottom: 0;
+            right: 84px;
+            background-image: url('/dist/img/img01.png');
+            background-repeat: no-repeat;
+        }
+    }
+
+    .whatwedoHead {
+        background: $white;
+        @include paddingLg;
+        width: 45%;
+
+        .contentWhatweDo {
+            margin-top: 4.5rem;
+
+            h4 {
+                color: $blue;
+                font-weight: 700;
+                font-size: 1.2em;
+            }
+
+            h2 {
+                font-size: 3em;
+                color: $text-color;
+                font-weight: 700;
+            }
+
+            &::after {
+                content: "";
+                width: 300px;
+                height: 300px;
+                background-image: url('/dist/img/dotssquare.png');
+                background-repeat: no-repeat;
+                z-index: 9;
+                position: absolute;
+                top: 0;
+                margin: 1rem;
+            }
+        }
+
+        button {
+            border: 1px solid $blue;
+            margin: 1rem 0;
+            background: $white;
+            padding: .5rem 1.5rem;
+            text-align: center;
+            color: $blue;
+            border-radius: 6px;
+            transition: .3s;
+            cursor: pointer;
+
+            &:hover {
+                background: $blue;
+                color: $white;
+            }
+        }
 
     }
-  }
-  }
 
- }
+    .whatweDoGrids {
+        width: 55%;
+        padding:0 6rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background: $white;
+        gap: 1rem;
+
+        .serviceSquare {
+            min-height: auto;
+            min-width:265px;
+            width: 100%;
+            margin: 1rem;
+            padding: 2rem 1rem;
+            background: $white;
+            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            img{
+                margin-bottom: 0.5rem;
+            }
+            .serviceName{
+                font-size: 1.5em;
+                font-weight: 400;
+                color: $text-color;
+                margin-bottom: 1rem;
+            }
+            p{
+                font-size: .9em;
+                font-weight: 400;
+            }
+            .learnMoreBtn{
+                color:$blue;
+            }
+        }
+        .mtSquare{
+            margin-top: 3rem;
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    .menuBar {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem;
+        align-items: center;
+
+        .logo {
+            aspect-ratio: 1/1;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+        .menus {
+            display: none;
+
+            ul {
+                li {
+                    position: relative;
+                    font-size: 1em;
+                    margin: 0 0.75rem;
+                    transition: .3s;
+
+                    a {
+                        text-decoration: none;
+                        color: $text-color;
+                        font-weight: 400;
+                        // border-bottom: 2px solid transparent;
+
+                    }
+
+                    &:hover {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background: $text-color;
+                            width: 20px;
+                            height: 4px;
+                            bottom: -2px;
+                            right: 10px;
+                            border-radius: 2px;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .rightNav {
+            ul {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+
+                li {
+                    span {
+                        img {
+                            width: 20px;
+                            height: 20px;
+                            object-fit: contain;
+
+                        }
+                    }
+
+                    .hamMenuBar {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0.25rem;
+
+                        div {
+                            // display: block;
+                            width: 20px;
+                            height: 3px;
+                            background: $text-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mainSliderDiv {
+        margin: 1.5rem;
+
+        .sliderDiv {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .slideContent {
+                order: 2;
+
+                .textOne {
+                    font-weight: 700;
+                    font-size: 3em;
+                    line-height: 32px;
+                    margin: 1rem 0;
+                }
+
+                .textTwo {
+                    @extend .textOne;
+                    font-weight: 400;
+                    line-height: 42px;
+                }
+
+                .paraSlide {
+                    font-size: 1em;
+                    font-weight: 300;
+                    width: 36rem;
+                }
+
+            }
+
+            .slideImage {
+                position: relative;
+                order: 1;
+                width: 75%;
+                height: auto;
+                margin: 0 auto;
+
+                img {
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .indicatorDiv {}
+
+        .carousel-indicators {
+            position: absolute;
+            justify-content: start;
+            bottom: -2rem;
+            margin: 0;
+
+            li {
+                background: $text-color;
+                border-radius: 50%;
+                width: 9px;
+                min-height: 9px;
+                opacity: 1;
+                border: 0;
+
+                &.active {
+                    background: $blue;
+
+                }
+            }
+        }
+
+    }
+}
