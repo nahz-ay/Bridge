@@ -174,21 +174,22 @@ body {
 }
 .servicesDiv .serviceGrids {
   display: flex;
-}
-.servicesDiv .serviceGrids .whatwedoHead {
-  background: #FFFFFF;
   padding: 0.5rem 10rem;
-  width: 45%;
+  background: #FFFFFF;
 }
 @media screen and (max-width: 1024px) {
-  .servicesDiv .serviceGrids .whatwedoHead {
+  .servicesDiv .serviceGrids {
     padding: 0.5rem 2.5rem;
   }
 }
 @media screen and (max-width: 768px) {
-  .servicesDiv .serviceGrids .whatwedoHead {
+  .servicesDiv .serviceGrids {
     padding: 1rem;
   }
+}
+.servicesDiv .serviceGrids .whatwedoHead {
+  background: #FFFFFF;
+  width: 45%;
 }
 .servicesDiv .serviceGrids .whatwedoHead .contentWhatweDo {
   margin-top: 4.5rem;

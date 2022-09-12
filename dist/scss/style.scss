@@ -216,9 +216,10 @@ body {
     }
     .serviceGrids{
         display: flex;
+        @include paddingLg;
+        background: $white; 
         .whatwedoHead {
             background: $white;
-            @include paddingLg;
             // padding-left: 13rem;
             width: 45%;
             .contentWhatweDo {
