@@ -73,6 +73,14 @@ body {
 
 .mainSliderDiv {
   padding: 0.5rem 10rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+@media screen and (max-width: 992px) {
+  .mainSliderDiv {
+    padding: 0.5rem 2.5rem;
+  }
 }
 .mainSliderDiv .sliderDiv .slideContent {
   margin-top: 15%;
@@ -133,6 +141,7 @@ body {
   height: 40vh;
   background: #F5F5F5;
   position: relative;
+  margin: 0 auto;
 }
 .servicesDiv .whatWeDoTopBG {
   height: 10vh;
@@ -157,25 +166,33 @@ body {
   background-image: url("/dist/img/img01.png");
   background-repeat: no-repeat;
 }
-.servicesDiv .whatwedoHead {
+.servicesDiv .serviceGrids {
+  display: flex;
+}
+.servicesDiv .serviceGrids .whatwedoHead {
   background: #FFFFFF;
   padding: 0.5rem 10rem;
   width: 45%;
 }
-.servicesDiv .whatwedoHead .contentWhatweDo {
+@media screen and (max-width: 992px) {
+  .servicesDiv .serviceGrids .whatwedoHead {
+    padding: 0.5rem 2.5rem;
+  }
+}
+.servicesDiv .serviceGrids .whatwedoHead .contentWhatweDo {
   margin-top: 4.5rem;
 }
-.servicesDiv .whatwedoHead .contentWhatweDo h4 {
+.servicesDiv .serviceGrids .whatwedoHead .contentWhatweDo h4 {
   color: #4776E6;
   font-weight: 700;
   font-size: 1.2em;
 }
-.servicesDiv .whatwedoHead .contentWhatweDo h2 {
+.servicesDiv .serviceGrids .whatwedoHead .contentWhatweDo h2 {
   font-size: 3em;
   color: #000000;
   font-weight: 700;
 }
-.servicesDiv .whatwedoHead .contentWhatweDo::after {
+.servicesDiv .serviceGrids .whatwedoHead .contentWhatweDo::after {
   content: "";
   width: 300px;
   height: 300px;
@@ -186,7 +203,7 @@ body {
   top: 0;
   margin: 1rem;
 }
-.servicesDiv .whatwedoHead button {
+.servicesDiv .serviceGrids .whatwedoHead button {
   border: 1px solid #4776E6;
   margin: 1rem 0;
   background: #FFFFFF;
@@ -197,11 +214,11 @@ body {
   transition: 0.3s;
   cursor: pointer;
 }
-.servicesDiv .whatwedoHead button:hover {
+.servicesDiv .serviceGrids .whatwedoHead button:hover {
   background: #4776E6;
   color: #FFFFFF;
 }
-.servicesDiv .whatweDoGrids {
+.servicesDiv .serviceGrids .whatweDoGrids {
   width: 55%;
   padding: 0 6rem;
   display: grid;
@@ -209,7 +226,7 @@ body {
   background: #FFFFFF;
   gap: 1rem;
 }
-.servicesDiv .whatweDoGrids .serviceSquare {
+.servicesDiv .serviceGrids .whatweDoGrids .serviceSquare {
   min-height: auto;
   min-width: 265px;
   width: 100%;
@@ -219,24 +236,75 @@ body {
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
-.servicesDiv .whatweDoGrids .serviceSquare img {
+.servicesDiv .serviceGrids .whatweDoGrids .serviceSquare img {
   margin-bottom: 0.5rem;
 }
-.servicesDiv .whatweDoGrids .serviceSquare .serviceName {
+.servicesDiv .serviceGrids .whatweDoGrids .serviceSquare .serviceName {
   font-size: 1.5em;
   font-weight: 400;
   color: #000000;
   margin-bottom: 1rem;
 }
-.servicesDiv .whatweDoGrids .serviceSquare p {
+.servicesDiv .serviceGrids .whatweDoGrids .serviceSquare p {
   font-size: 0.9em;
   font-weight: 400;
 }
-.servicesDiv .whatweDoGrids .serviceSquare .learnMoreBtn {
+.servicesDiv .serviceGrids .whatweDoGrids .serviceSquare .learnMoreBtn {
   color: #4776E6;
 }
-.servicesDiv .whatweDoGrids .mtSquare {
+.servicesDiv .serviceGrids .whatweDoGrids .mtSquare {
   margin-top: 3rem;
+}
+.servicesDiv::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 170px;
+  background-image: url("/dist/img/shape-top.png");
+  background-repeat: no-repeat;
+}
+
+.worksSection {
+  height: 70vh;
+  background: #F5F5F5;
+  margin-top: 30rem;
+  padding: 0.5rem 10rem;
+}
+@media screen and (max-width: 992px) {
+  .worksSection {
+    padding: 0.5rem 2.5rem;
+  }
+}
+.worksSection .headWorks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.worksSection .headWorks .sectionHead {
+  color: #000000;
+}
+.worksSection .headWorks .sectionHead h4 {
+  font-weight: 700;
+  font-size: 3.125em;
+  line-height: 56px;
+}
+.worksSection .headWorks .sectionHead h4 span {
+  display: block;
+}
+.worksSection .headWorks button {
+  border: 1px solid #4776E6;
+  margin: 1rem 0;
+  background: #FFFFFF;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  color: #4776E6;
+  border-radius: 6px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.worksSection .headWorks button:hover {
+  background: #4776E6;
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 992px) {
@@ -303,7 +371,7 @@ body {
     background: #000000;
   }
   .mainSliderDiv {
-    margin: 1.5rem;
+    margin: 0.5rem;
   }
   .mainSliderDiv .sliderDiv {
     display: flex;
@@ -326,7 +394,7 @@ body {
   .mainSliderDiv .sliderDiv .slideContent .paraSlide {
     font-size: 1em;
     font-weight: 300;
-    width: 36rem;
+    width: fit-content;
   }
   .mainSliderDiv .sliderDiv .slideImage {
     position: relative;
@@ -354,6 +422,136 @@ body {
   }
   .mainSliderDiv .carousel-indicators li.active {
     background: #4776E6;
+  }
+  .servicesDiv {
+    margin-top: 10rem;
+    height: 40vh;
+    background: #F5F5F5;
+    position: relative;
+    margin: 0 auto;
+  }
+  .servicesDiv .whatWeDoTopBG {
+    height: 10vh;
+    background: #FFFFFF;
+  }
+  .servicesDiv .whatWeDoTopBG::after {
+    content: "";
+    top: -99px;
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-image: url(/dist/img/bottomShape.png);
+  }
+  .servicesDiv .whatWeDoTopBG::before {
+    content: "";
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    top: -188px;
+    z-index: 9;
+    right: 24px;
+    background-image: url("/dist/img/img01.png");
+    background-repeat: no-repeat;
+  }
+  .servicesDiv .serviceGrids {
+    display: flex;
+    flex-direction: column;
+  }
+  .servicesDiv .serviceGrids .whatwedoHead {
+    background: #FFFFFF;
+    padding: 0.5rem 10rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) and (max-width: 992px) {
+  .servicesDiv .serviceGrids .whatwedoHead {
+    padding: 0.5rem 2.5rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .servicesDiv .serviceGrids .whatwedoHead .contentWhatweDo {
+    margin-top: 4.5rem;
+  }
+  .servicesDiv .serviceGrids .whatwedoHead .contentWhatweDo h4 {
+    color: #4776E6;
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  .servicesDiv .serviceGrids .whatwedoHead .contentWhatweDo h2 {
+    font-size: 3em;
+    color: #000000;
+    font-weight: 700;
+  }
+  .servicesDiv .serviceGrids .whatwedoHead .contentWhatweDo::after {
+    content: "";
+    width: 300px;
+    height: 300px;
+    background-image: url("/dist/img/dotssquare.png");
+    background-repeat: no-repeat;
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    margin: 1rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .servicesDiv .serviceGrids .whatwedoHead button {
+    border: 1px solid #4776E6;
+    margin: 1rem 0;
+    background: #FFFFFF;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    color: #4776E6;
+    border-radius: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .servicesDiv .serviceGrids .whatwedoHead button:hover {
+    background: #4776E6;
+    color: #FFFFFF;
+  }
+}
+@media screen and (max-width: 992px) {
+  .servicesDiv .serviceGrids .whatweDoGrids {
+    width: 100%;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    background: #FFFFFF;
+    gap: 1rem;
+  }
+  .servicesDiv .serviceGrids .whatweDoGrids .serviceSquare {
+    min-height: auto;
+    min-width: 100%;
+    width: 100%;
+    margin: 1rem 0rem;
+    padding: 1rem;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+  }
+  .servicesDiv .serviceGrids .whatweDoGrids .serviceSquare img {
+    margin-bottom: 0.75rem;
+    width: 55px;
+    height: 45px;
+  }
+  .servicesDiv .serviceGrids .whatweDoGrids .serviceSquare .serviceName {
+    font-size: 1em;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 0.5rem;
+  }
+  .servicesDiv .serviceGrids .whatweDoGrids .serviceSquare p {
+    font-size: 0.8em;
+    font-weight: 400;
+  }
+  .servicesDiv .serviceGrids .whatweDoGrids .serviceSquare .learnMoreBtn {
+    color: #4776E6;
+    font-size: 0.8em;
+  }
+  .servicesDiv .serviceGrids .whatweDoGrids .mtSquare {
+    margin-top: 3rem;
   }
 }
 

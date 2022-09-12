@@ -1,4 +1,24 @@
 @mixin paddingLg {
     padding: 0.5rem 10rem;
-    
+    @media screen and (max-width:992px){
+    padding: 0.5rem 2.5rem;
+
+    }
+}
+
+@mixin themBtn {
+    border: 1px solid $blue;
+    margin: 1rem 0;
+    background: $white;
+    padding: .5rem 1.5rem;
+    text-align: center;
+    color: $blue;
+    border-radius: 6px;
+    transition: .3s;
+    cursor: pointer;
+
+    &:hover {
+        background: $blue;
+        color: $white;
+    }
 }

@@ -100,6 +100,9 @@ body {
 
 .mainSliderDiv {
     @include paddingLg;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 
     .sliderDiv {
         .slideContent {
@@ -192,6 +195,7 @@ body {
     height: 40vh;
     background: $bg-color;
     position: relative;
+    margin: 0 auto;
 
     .whatWeDoTopBG {
         height: 10vh;
@@ -219,97 +223,121 @@ body {
             background-repeat: no-repeat;
         }
     }
-
-    .whatwedoHead {
-        background: $white;
-        @include paddingLg;
-        width: 45%;
-
-        .contentWhatweDo {
-            margin-top: 4.5rem;
-
-            h4 {
-                color: $blue;
-                font-weight: 700;
-                font-size: 1.2em;
+    .serviceGrids{
+        display: flex;
+        .whatwedoHead {
+            background: $white;
+            @include paddingLg;
+            // padding-left: 13rem;
+            width: 45%;
+            .contentWhatweDo {
+                margin-top: 4.5rem;
+    
+                h4 {
+                    color: $blue;
+                    font-weight: 700;
+                    font-size: 1.2em;
+                }
+    
+                h2 {
+                    font-size: 3em;
+                    color: $text-color;
+                    font-weight: 700;
+                }
+    
+                &::after {
+                    content: "";
+                    width: 300px;
+                    height: 300px;
+                    background-image: url('/dist/img/dotssquare.png');
+                    background-repeat: no-repeat;
+                    z-index: 9;
+                    position: absolute;
+                    top: 0;
+                    margin: 1rem;
+                }
             }
-
-            h2 {
-                font-size: 3em;
-                color: $text-color;
-                font-weight: 700;
+    
+            button {
+               @include themBtn;
             }
-
-            &::after {
-                content: "";
-                width: 300px;
-                height: 300px;
-                background-image: url('/dist/img/dotssquare.png');
-                background-repeat: no-repeat;
-                z-index: 9;
-                position: absolute;
-                top: 0;
+    
+        }
+    
+        .whatweDoGrids {
+            width: 55%;
+            padding:0 6rem;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            background: $white;
+            gap: 1rem;
+    
+            .serviceSquare {
+                min-height: auto;
+                min-width:265px;
+                width: 100%;
                 margin: 1rem;
+                padding: 2rem 1rem;
+                background: $white;
+                box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+                border-radius: 15px;
+                img{
+                    margin-bottom: 0.5rem;
+                }
+                .serviceName{
+                    font-size: 1.5em;
+                    font-weight: 400;
+                    color: $text-color;
+                    margin-bottom: 1rem;
+                }
+                p{
+                    font-size: .9em;
+                    font-weight: 400;
+                }
+                .learnMoreBtn{
+                    color:$blue;
+                }
             }
-        }
-
-        button {
-            border: 1px solid $blue;
-            margin: 1rem 0;
-            background: $white;
-            padding: .5rem 1.5rem;
-            text-align: center;
-            color: $blue;
-            border-radius: 6px;
-            transition: .3s;
-            cursor: pointer;
-
-            &:hover {
-                background: $blue;
-                color: $white;
+            .mtSquare{
+                margin-top: 3rem;
             }
-        }
-
-    }
-
-    .whatweDoGrids {
-        width: 55%;
-        padding:0 6rem;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        background: $white;
-        gap: 1rem;
-
-        .serviceSquare {
-            min-height: auto;
-            min-width:265px;
-            width: 100%;
-            margin: 1rem;
-            padding: 2rem 1rem;
-            background: $white;
-            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-            img{
-                margin-bottom: 0.5rem;
-            }
-            .serviceName{
-                font-size: 1.5em;
-                font-weight: 400;
-                color: $text-color;
-                margin-bottom: 1rem;
-            }
-            p{
-                font-size: .9em;
-                font-weight: 400;
-            }
-            .learnMoreBtn{
-                color:$blue;
-            }
-        }
-        .mtSquare{
-            margin-top: 3rem;
         }
     }
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 170px;
+        background-image: url('/dist/img/shape-top.png');
+        background-repeat: no-repeat;
+    }
+    
+}
+.worksSection{
+    height: 70vh;
+    background: $bg-color;
+    margin-top: 30rem;
+    @include paddingLg;
+    .headWorks{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .sectionHead{
+            color:$text-color;
+            h4{
+                font-weight: 700;
+                font-size: 3.125em;
+                line-height: 56px;
+                span{
+                    display: block;
+                }
+            }
+        }
+        button{
+            @include themBtn;
+        }
+    }
+    
 }
 
 @media screen and (max-width:992px) {
@@ -403,7 +431,7 @@ body {
     }
 
     .mainSliderDiv {
-        margin: 1.5rem;
+        margin: .5rem;
 
         .sliderDiv {
             display: flex;
@@ -429,7 +457,7 @@ body {
                 .paraSlide {
                     font-size: 1em;
                     font-weight: 300;
-                    width: 36rem;
+                    width: fit-content;
                 }
 
             }
@@ -470,5 +498,141 @@ body {
             }
         }
 
+    }
+
+    .servicesDiv {
+        margin-top: 10rem;
+        height: 40vh;
+        background: $bg-color;
+        position: relative;
+        margin: 0 auto;
+    
+        .whatWeDoTopBG {
+            height: 10vh;
+            background: $white;
+    
+            &::after {
+                content: "";
+                top: -99px;
+                position: absolute;
+                height: 100px;
+                width: 100%;
+                background-image: url(/dist/img/bottomShape.png);
+            }
+    
+            &::before {
+                content: "";
+                width: 300px;
+                height: 100px;
+                position: absolute;
+                top: -188px;
+                z-index: 9;
+                // bottom: 0;
+                right: 24px;
+                background-image: url('/dist/img/img01.png');
+                background-repeat: no-repeat;
+            }
+        }
+        .serviceGrids{
+            display: flex;
+            flex-direction: column;
+            .whatwedoHead {
+                background: $white;
+                @include paddingLg;
+                width: 100%;
+                // padding-left: 13rem;
+                // width: 45%;
+                .contentWhatweDo {
+                    margin-top: 4.5rem;
+        
+                    h4 {
+                        color: $blue;
+                        font-weight: 700;
+                        font-size: 1.2em;
+                    }
+        
+                    h2 {
+                        font-size: 3em;
+                        color: $text-color;
+                        font-weight: 700;
+                    }
+        
+                    &::after {
+                        content: "";
+                        width: 300px;
+                        height: 300px;
+                        background-image: url('/dist/img/dotssquare.png');
+                        background-repeat: no-repeat;
+                        z-index: 9;
+                        position: absolute;
+                        top: 0;
+                        margin: 1rem;
+                    }
+                }
+        
+                button {
+                    border: 1px solid $blue;
+                    margin: 1rem 0;
+                    background: $white;
+                    padding: .5rem 1.5rem;
+                    text-align: center;
+                    color: $blue;
+                    border-radius: 6px;
+                    transition: .3s;
+                    cursor: pointer;
+        
+                    &:hover {
+                        background: $blue;
+                        color: $white;
+                    }
+                }
+        
+            }
+        
+            .whatweDoGrids {
+                width: 100%;
+                padding:0 2rem;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                justify-content: center;
+                background: $white;
+                gap: 1rem;
+        
+                .serviceSquare {
+                    min-height: auto;
+                    min-width:100%;
+                    width: 100%;
+                    margin: 1rem 0rem;
+                    padding:1rem;
+                    background: $white;
+                    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+                    border-radius: 15px;
+                    img{
+                        margin-bottom: 0.75rem;
+                        width: 55px;
+                        height: 45px;
+                    }
+                    .serviceName{
+                        font-size: 1em;
+                        font-weight: 400;
+                        color: $text-color;
+                        margin-bottom: .5rem;
+                    }
+                    p{
+                        font-size: .8em;
+                        font-weight: 400;
+                    }
+                    .learnMoreBtn{
+                        color:$blue;
+                        font-size: .8em;
+
+                    }
+                }
+                .mtSquare{
+                    margin-top: 3rem;
+                }
+            }
+        }
+        
     }
 }
