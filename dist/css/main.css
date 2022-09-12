@@ -223,6 +223,7 @@ body {
   color: #4776E6;
   border-radius: 6px;
   transition: 0.3s;
+  min-width: 110px;
   cursor: pointer;
 }
 .servicesDiv .serviceGrids .whatwedoHead button:hover {
@@ -316,6 +317,7 @@ body {
   color: #4776E6;
   border-radius: 6px;
   transition: 0.3s;
+  min-width: 110px;
   cursor: pointer;
 }
 .worksSection .headWorks button:hover {
@@ -640,6 +642,7 @@ body {
     color: #4776E6;
     border-radius: 6px;
     transition: 0.3s;
+    min-width: 110px;
     cursor: pointer;
   }
   .servicesDiv .serviceGrids .whatwedoHead button:hover {
@@ -740,6 +743,7 @@ body {
     color: #4776E6;
     border-radius: 6px;
     transition: 0.3s;
+    min-width: 110px;
     cursor: pointer;
   }
   .worksSection .headWorks button:hover {
@@ -846,6 +850,452 @@ body {
     font-size: 1.25em;
     font-weight: 400;
     margin-bottom: 1.75rem;
+  }
+  .footerMainDiv .footerSections .sectionItem p {
+    font-size: 0.85em;
+    font-weight: 400;
+  }
+  .footerMainDiv .footerSections .sectionItem ul {
+    padding-left: 0.25rem;
+  }
+  .footerMainDiv .footerSections .sectionItem ul li {
+    margin-bottom: 0.75rem;
+  }
+  .footerMainDiv .footerSections .sectionItem img {
+    width: 70px;
+    height: 70px;
+  }
+  .footerMainDiv .footerSections .sectionItem .itemImg img {
+    border-radius: 7px;
+  }
+  .footerMainDiv .footerSections .sectionItem input {
+    padding: 0 1rem;
+  }
+  .footerMainDiv .footerSections .sectionItem input:focus-visible {
+    outline: 1px solid #4776E6;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menuBar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    align-items: center;
+  }
+  .menuBar .logo {
+    aspect-ratio: 1/1;
+  }
+  .menuBar .logo img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .menuBar .menus {
+    display: none;
+  }
+  .menuBar .menus ul li {
+    position: relative;
+    font-size: 1em;
+    margin: 0 0.75rem;
+    transition: 0.3s;
+  }
+  .menuBar .menus ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400;
+  }
+  .menuBar .menus ul li:hover::after {
+    content: "";
+    position: absolute;
+    background: #000000;
+    width: 20px;
+    height: 4px;
+    bottom: -2px;
+    right: 10px;
+    border-radius: 2px;
+  }
+  .menuBar .rightNav ul {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .menuBar .rightNav ul li span img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  .menuBar .rightNav ul li .hamMenuBar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+  .menuBar .rightNav ul li .hamMenuBar div {
+    width: 20px;
+    height: 3px;
+    background: #000000;
+  }
+  .mainSliderDiv {
+    margin: 0rem;
+  }
+  .mainSliderDiv .sliderDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mainSliderDiv .sliderDiv .slideContent {
+    order: 2;
+    margin-top: 0.5rem;
+  }
+  .mainSliderDiv .sliderDiv .slideContent .textOne, .mainSliderDiv .sliderDiv .slideContent .textTwo {
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 12px;
+    margin: 1rem 0;
+  }
+  .mainSliderDiv .sliderDiv .slideContent .textTwo {
+    font-weight: 400;
+    line-height: 32px;
+  }
+  .mainSliderDiv .sliderDiv .slideContent .paraSlide {
+    font-size: 1em;
+    font-weight: 300;
+    width: fit-content;
+  }
+  .mainSliderDiv .sliderDiv .slideImage {
+    position: relative;
+    order: 1;
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+    z-index: 9;
+  }
+  .mainSliderDiv .sliderDiv .slideImage img {
+    object-fit: cover;
+  }
+  .mainSliderDiv .carousel-indicators {
+    position: absolute;
+    justify-content: start;
+    bottom: -2rem;
+  }
+  .mainSliderDiv .carousel-indicators li {
+    background: #000000;
+    border-radius: 50%;
+    width: 9px;
+    margin: 0 0.21rem;
+    min-height: 9px;
+    opacity: 1;
+    border: 0;
+  }
+  .mainSliderDiv .carousel-indicators li.active {
+    background: #4776E6;
+  }
+  .servicesDiv {
+    margin-top: 10rem;
+    height: 40vh;
+    background: #F5F5F5;
+    position: relative;
+    margin: 0 auto;
+  }
+  .servicesDiv .whatWeDoTopBG {
+    height: 10vh;
+    background: #FFFFFF;
+  }
+  .servicesDiv .whatWeDoTopBG::after {
+    content: "";
+    top: -99px;
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-image: url(/dist/img/bottomShape.png);
+  }
+  .servicesDiv .whatWeDoTopBG::before {
+    display: none;
+    content: "";
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: -8px;
+    z-index: 9;
+    right: 84px;
+    background-image: url("/dist/img/img01.png");
+    background-repeat: no-repeat;
+  }
+  .servicesDiv .serviceGrids {
+    display: flex;
+    flex-direction: column;
+  }
+  .servicesDiv .serviceGrids .whatwedoHead {
+    background: #FFFFFF;
+    padding: 0.5rem 10rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 1024px) {
+  .servicesDiv .serviceGrids .whatwedoHead {
+    padding: 0.5rem 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .servicesDiv .serviceGrids .whatwedoHead {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .servicesDiv .serviceGrids .whatwedoHead .contentWhatweDo {
+    margin-top: 0.5rem;
+  }
+  .servicesDiv .serviceGrids .whatwedoHead .contentWhatweDo h4 {
+    color: #4776E6;
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  .servicesDiv .serviceGrids .whatwedoHead .contentWhatweDo h2 {
+    font-size: 3em;
+    color: #000000;
+    font-weight: 700;
+  }
+  .servicesDiv .serviceGrids .whatwedoHead .contentWhatweDo::after {
+    content: "";
+    width: 300px;
+    height: 300px;
+    display: none;
+    background-image: url("/dist/img/dotssquare.png");
+    background-repeat: no-repeat;
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .servicesDiv .serviceGrids .whatwedoHead button {
+    border: 1px solid #4776E6;
+    margin: 1rem 0;
+    background: #FFFFFF;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    color: #4776E6;
+    border-radius: 6px;
+    transition: 0.3s;
+    min-width: 110px;
+    cursor: pointer;
+  }
+  .servicesDiv .serviceGrids .whatwedoHead button:hover {
+    background: #4776E6;
+    color: #FFFFFF;
+  }
+}
+@media screen and (max-width: 768px) {
+  .servicesDiv .serviceGrids .whatweDoGrids {
+    width: 100%;
+    padding: 0 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: #FFFFFF;
+    gap: 1rem;
+  }
+  .servicesDiv .serviceGrids .whatweDoGrids .serviceSquare {
+    min-height: auto;
+    min-width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+  }
+  .servicesDiv .serviceGrids .whatweDoGrids .serviceSquare img {
+    margin-bottom: 0.5rem;
+    width: 50px;
+    height: 40px;
+  }
+  .servicesDiv .serviceGrids .whatweDoGrids .serviceSquare .serviceName {
+    font-size: 1em;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 0.5rem;
+  }
+  .servicesDiv .serviceGrids .whatweDoGrids .serviceSquare p {
+    font-size: 0.85em;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  .servicesDiv .serviceGrids .whatweDoGrids .serviceSquare .learnMoreBtn {
+    color: #4776E6;
+  }
+  .servicesDiv .serviceGrids .whatweDoGrids .mtSquare {
+    margin-top: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .servicesDiv::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-image: url("/dist/img/shape-top.png");
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 768px) {
+  .worksSection {
+    height: 70vh;
+    background: #F5F5F5;
+    margin-top: 39rem;
+    padding: 0.5rem 10rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 1024px) {
+  .worksSection {
+    padding: 0.5rem 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .worksSection {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .worksSection .headWorks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .worksSection .headWorks .sectionHead {
+    color: #000000;
+  }
+  .worksSection .headWorks .sectionHead h4 {
+    font-weight: 700;
+    font-size: 2.125em;
+    line-height: 36px;
+  }
+  .worksSection .headWorks .sectionHead h4 span {
+    display: block;
+  }
+  .worksSection .headWorks button {
+    border: 1px solid #4776E6;
+    margin: 1rem 0;
+    background: #FFFFFF;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    color: #4776E6;
+    border-radius: 6px;
+    transition: 0.3s;
+    min-width: 110px;
+    cursor: pointer;
+    width: 100px;
+    font-size: 0.788em;
+  }
+  .worksSection .headWorks button:hover {
+    background: #4776E6;
+    color: #FFFFFF;
+  }
+}
+@media screen and (max-width: 768px) {
+  .worksSection .scrollSection {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 1rem;
+    padding: 1rem;
+    margin: 3rem auto 0;
+    scrollbar-width: thin;
+    z-index: 99;
+    position: relative;
+  }
+  .worksSection .scrollSection img {
+    border-radius: 10px;
+  }
+  .worksSection .scrollSection .sectionItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 250px;
+    height: 250px;
+    scroll-snap-align: start;
+  }
+  .worksSection .scrollSection .sectionItem img {
+    transition: 0.3s;
+  }
+  .worksSection .scrollSection .sectionItem img:hover {
+    transform: scale(1.01);
+  }
+  .worksSection .scrollSection::-webkit-scrollbar {
+    background: rgba(227, 223, 223, 0.575);
+    border-radius: 10px;
+    height: 12px;
+  }
+  .worksSection .scrollSection::-webkit-scrollbar-thumb {
+    background: #4776E6;
+    border-radius: 6px;
+    border: 2px solid #F5F5F5;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dividerDiv {
+    position: relative;
+    height: 160px;
+    width: 100%;
+    right: 0;
+    top: -18rem;
+    z-index: 0;
+    background-image: url(/dist/img/shapebottom.png);
+    background-repeat: no-repeat;
+  }
+  .dividerDiv::before {
+    content: "";
+    position: absolute;
+    background: #FFFFFF;
+    width: 100%;
+    height: 125px;
+    bottom: -85px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footerMainDiv {
+    height: auto;
+    padding: 0.5rem 10rem;
+    width: 100%;
+    margin-top: -11rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 1024px) {
+  .footerMainDiv {
+    padding: 0.5rem 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .footerMainDiv {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footerMainDiv .footerSections {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .footerMainDiv .footerSections .sectionItem {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .footerMainDiv .footerSections .sectionItem h5 {
+    font-size: 1.25em;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
   }
   .footerMainDiv .footerSections .sectionItem p {
     font-size: 0.85em;

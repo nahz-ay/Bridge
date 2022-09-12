@@ -19,6 +19,7 @@
     color: $blue;
     border-radius: 6px;
     transition: .3s;
+    min-width: 110px;
     cursor: pointer;
 
     &:hover {
