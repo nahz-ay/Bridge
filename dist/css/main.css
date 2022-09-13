@@ -123,6 +123,9 @@ body {
 .mainSliderDiv .sliderDiv .slideImage img {
   object-fit: cover;
 }
+.mainSliderDiv .carousel-control-next, .mainSliderDiv .carousel-control-prev {
+  display: none;
+}
 .mainSliderDiv .carousel-indicators {
   position: absolute;
   justify-content: start;
@@ -402,6 +405,7 @@ body {
   }
 }
 .footerMainDiv .footerSections {
+  padding-top: 1rem;
   display: flex;
   gap: 0.25rem;
   justify-content: center;
@@ -427,6 +431,7 @@ body {
 }
 .footerMainDiv .footerSections .sectionItem ul li {
   margin-bottom: 0.75rem;
+  cursor: pointer;
 }
 .footerMainDiv .footerSections .sectionItem img {
   width: 70px;
@@ -440,6 +445,9 @@ body {
 }
 .footerMainDiv .footerSections .sectionItem input:focus-visible {
   outline: 1px solid #4776E6;
+}
+.footerMainDiv .footerSections .sectionItem button {
+  min-width: 150px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1146,7 +1154,7 @@ body {
   .worksSection {
     height: 70vh;
     background: #F5F5F5;
-    margin-top: 39rem;
+    margin-top: 46rem;
     padding: 0.5rem 10rem;
   }
 }

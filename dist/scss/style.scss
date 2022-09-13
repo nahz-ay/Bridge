@@ -153,7 +153,7 @@ body {
         }
        
     }
-
+    .carousel-control-next, .carousel-control-prev{display: none;}
 
     // .indicatorDiv {}
 
@@ -406,6 +406,7 @@ body {
     .footerSections{
         // display: grid;
         // grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+        padding-top: 1rem;
         display: flex;
         gap: 0.25rem;
         justify-content: center;
@@ -429,6 +430,7 @@ body {
                     margin-bottom: 0.75rem;
                     // text-overflow: ellipsis;
                     // width: 90%;
+                    cursor: pointer;
                 }
             }
             img{
@@ -443,6 +445,9 @@ body {
                 &:focus-visible{
                     outline: 1px solid $blue;
                 }
+            }
+            button{
+                min-width: 150px;
             }
         }
     }
@@ -1173,7 +1178,7 @@ body {
     .worksSection{
         height: 70vh;
         background: $bg-color;
-        margin-top: 39rem;
+        margin-top: 46rem;
         
         // margin-bottom: 20rem;
         @include paddingLg;
